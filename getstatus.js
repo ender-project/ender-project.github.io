@@ -1,8 +1,6 @@
-$.getJSON(
-    "https://status.ender-bot.ml/get.json", //リクエストURL
-    null,       //送信データ
-    function(data, status) {
-      // 通信成功時の処理
-      document.write(data)
-    }
-  );
+$.getJSON("//ender-bot.ml/get.json", function() {
+    alert("success");
+  })
+  .success(function() { alert("second success"); })
+  .error(function() { alert("error"); })
+  .complete(function() { alert("complete"); });
