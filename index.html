@@ -16,6 +16,11 @@
 </head>
 <body>
     <h1>どうも、私エンダーBotと申します。</h1>
-<script src="getstatus.js"></script>
+<script type="text/javascript">
+$.getJSON("//status.ender-bot.ml/get.json", function(json){
+    alert(data.ping);
+})
+
+</script>
 </body>
 </html>
