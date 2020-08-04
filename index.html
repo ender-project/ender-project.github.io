@@ -17,11 +17,16 @@
     <h1>どうも、私エンダーBotと申します。</h1>
 <script type="text/javascript">
 $.ajax({
-  type: "get",
-  url: "//https://ender-bot.onichanet.repl.co/get.json",
-  dataType: "json"
-  success: function(data, dataType){}
-});
+  url: '//ender-bot.onichanet.repl.co/get.json'
+})
+.then(
+  function(json) {
+document.write(json)
+  },
+  function() {
+document.write('内部エラーが発生しました。')
+  }
+);
 </script>
 
 </script>
