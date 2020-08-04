@@ -21,10 +21,11 @@ $.ajax({
 })
 .then(
   function(json) {
-document.write(json)
+const r = JSON.parse(json);
+document.write('<h1>EnderBotのステータス</h1>\n\n<h2>Ping:<h2>\n<h3>'+r.ping+'ms<h3>\n\n<h2>Guilds:<h2>\n<h3>'+r.guilds+' Guilds<h3>\n\n<h2>Members:<h2>\n<h3>'+r.members+' Members<h3>')
   },
   function() {
-document.write('内部エラーが発生しました。')
+document.write('内部エラーが発生しました。');
   }
 );
 </script>
