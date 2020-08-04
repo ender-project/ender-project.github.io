@@ -9,17 +9,20 @@
         <meta property="og:site_name" content="Enderbot">
         <meta property="og:image" content="https://cdn.discordapp.com/avatars/721172178141184053/dcda8457f8960303151ba185023b1748.png">
         <title>EnderBot - Official</title>
-        <!-- <script type="text/javascript" src="js/main.js"></script> -->
         <link rel="stylesheet" type="text/css" href="index.css">
         <link rel="shortcut icon" href="https://cdn.discordapp.com/avatars/721172178141184053/dcda8457f8960303151ba185023b1748.png">
-        <script src="./jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <h1>どうも、私エンダーBotと申します。</h1>
 <script type="text/javascript">
-$.getJSON("//ender-bot.onichanet.repl.co/get.json", function(json){
-    alert(data.ping);
-})
+$.ajax({
+  type: "get",
+  url: "//https://ender-bot.onichanet.repl.co/get.json",
+  dataType: "json"
+  success: function(data, dataType){}
+});
+</script>
 
 </script>
 </body>
